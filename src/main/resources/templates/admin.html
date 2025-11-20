@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./Admin.css">
+
+</head>
+<body>
+    <div style="text-align:center; padding:20px; background-color:#0F172A; color:rgb(255, 255, 255); box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+        <h1 style="margin:0; font-size:28px;">🛒 Admin Dashboard — Manage Products</h1>
+        <p style="font-size:16px; margin-top:8px;">Add, Update, and Delete Products Effortlessly</p>
+    </div>
+    <div id="product" style="margin-top: 40px;">
+        <h2 style="font-family:'Times New Roman',serif; color:#00796B; margin-bottom:20px;">Add or Update Product Details</h2>
+            <input type="hidden" id="id">
+            <input type="text" placeholder="Enter product name" id="name"><br>
+            <input type="text" placeholder="Enter price of product" id="price"><br>
+            <input type="text" placeholder="Eneter description" id="description"><br>
+            <input type="text" placeholder="Enter category of a product" id="category"><br>
+            <input type="text" placeholder="Enter image url" id="image"><br>
+            <input type="text" placeholder="Enter rating of a product" id="rating"><br>
+            <input type="text" placeholder="Enter number of quantity available for this product" id="quantity"><br>
+            <button onclick="sendData()">Submit</button><br>
+        
+
+    </div>
+
+
+    <div id="container"></div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+

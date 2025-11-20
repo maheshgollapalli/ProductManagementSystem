@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopora - Online Shopping Platform</title>
+  <link rel="icon" href="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/b2/20251102/c703e801/f985aaa4-a9c2-4818-aa99-29caca6da176900619270.png?Expires=1762684154&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=9XaYptrBJFC2qPr1mueIkdFOQ0E%3D" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+	<link rel="stylesheet" href="user.css">
+	<style>
+		footer {
+  font-family: "Times New Roman", serif;
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+}
+	</style>
+	
+</head>
+<body>
+  <header>
+   <div class="menu" style="display:flex; justify-content:space-between; align-items:center; padding:10px 60px; background:linear-gradient(90deg, #1e3c72, #2a5298); box-shadow:0 2px 8px rgba(0,0,0,0.2); top:0; z-index:1; height:60px;">
+  <h1 style="color:#facc15; font-family:'Times New Roman',serif; margin:0; font-size:28px;">𝑆𝒉𝑜𝑝𝑜𝑟𝑎🛍️</h1>
+
+  <div style="text-align:center;">
+    <a href="#welcome-section" 
+       style="text-decoration:none; color:white; font-family:'Times New Roman',serif; font-size:18px; margin:0 18px; padding:6px 10px; border-radius:5px; transition:0.3s;"
+       onmouseover="this.style.color='#facc15'" 
+       onmouseout="this.style.color='white'">Home</a>
+    <a href="#about" 
+       style="text-decoration:none; color:white; font-family:'Times New Roman',serif; font-size:18px; margin:0 18px; padding:6px 10px; border-radius:5px; transition:0.3s;"
+       onmouseover="this.style.color='#facc15'" 
+       onmouseout="this.style.color='white'">About</a>
+    <a href="#contact" 
+       style="text-decoration:none; color:white; font-family:'Times New Roman',serif; font-size:18px; margin:0 18px; padding:6px 10px; border-radius:5px; transition:0.3s;"
+       onmouseover="this.style.color='#facc15'" 
+       onmouseout="this.style.color='white'">Contact</a>
+    <a href="/logout"
+       style="text-decoration:none; color:white; font-family:'Times New Roman',serif; font-size:18px; margin:0 18px; padding:6px 10px; border-radius:5px; transition:0.3s;"
+       onmouseover="this.style.color='#facc15'" 
+       onmouseout="this.style.color='white'">Logout</a>
+    
+  </div>
+
+  <button id="cart" onclick="toggleCart()" 
+          style="background-color:#facc15; color:black; border:none; padding:6px 14px; border-radius:5px; font-family:'Times New Roman',serif; font-size:15px; cursor:pointer;">
+    <i class="bi bi-cart"></i> Cart
+  </button>
+</div>
+
+
+
+
+
+
+    <div id="welcome-section">
+      <div class="overlay"></div>
+      <div class="welcome-content">
+        <h1>Welcome to Shopora</h1>
+        <p>Everything You Love, One Click Away</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart popup -->
+  <div id="openCart">
+    <div id="cartHead">
+      <h2>Your Cart</h2>
+      <button id="closeBtn" onclick="toggleCart()">X</button>
+    </div>
+    <div id="cartBody">
+      <p>Your cart is empty.</p>
+    </div>
+  </div>
+
+  <div id="container"></div>
+
+  <section class="about" id="about">
+  <h3>About Shopora</h3>
+  <p>At Shopora, we believe shopping should be simple and delightful. We focus on minimal design and smooth user interaction, offering carefully curated items that match your lifestyle and comfort. Our team handpicks every product to ensure quality, style, and affordability. With Shopora, discover a seamless shopping experience that brings elegance to everyday living. We constantly update our collections to reflect the latest trends while maintaining timeless appeal. Our customer-first approach ensures that every purchase feels personal and satisfying. Whether for your home, wardrobe, or gifting needs, Shopora makes every choice effortless and refined.
+</p>
+</section>
+
+
+
+<section id="contact" style="font-family:'Times New Roman',serif; background-color:#f4f4f4; padding:70px 60px; width:90%;">
+  <h2 style="color:#2c3e50; font-size:34px; margin-bottom:40px; text-align:center;">Get in Touch with Shopora</h2>
+
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; max-width:1200px; margin:auto;">
+    
+    <!-- Left Part: Contact Details -->
+    <div style="flex:1; min-width:350px; padding:20px;">
+      <h3 style="color:#2c3e50; margin-bottom:20px;">Contact Details</h3>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        📧 <a href="mailto:support@shopora.com" style="color:#2c3e50; text-decoration:none;">support@shopora.com</a>
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        📧 <a href="mailto:help@shopora.com" style="color:#2c3e50; text-decoration:none;">help@shopora.com</a> (Alternate)
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        📞 <a href="tel:+919876543210" style="color:#2c3e50; text-decoration:none;">+91 98765 43210</a>
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        ☎️ Toll-Free: 1800-123-4567
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        ✉️ For business inquiries: <a href="mailto:business@shopora.com" style="color:#2c3e50; text-decoration:none;">business@shopora.com</a>
+      </p>
+    </div>
+
+    <!-- Right Part: Address & Additional Info -->
+    <div style="flex:1; min-width:350px; padding:20px;">
+      <h3 style="color:#2c3e50; margin-bottom:20px;">Our Location & Hours</h3>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        📍 123, Green Avenue, Hyderabad, Telangana, India
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        🕒 Working Hours: Mon – Sat, 9:00 AM – 6:00 PM
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        🌐 Website: <a href="https://www.shopora.com" style="color:#2c3e50; text-decoration:none;">www.shopora.com</a>
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        📱 Follow us:
+        <a href="#" style="color:#2c3e50; text-decoration:none; margin:0 8px;">Facebook</a> |
+        <a href="#" style="color:#2c3e50; text-decoration:none; margin:0 8px;">Instagram</a> |
+        <a href="#" style="color:#2c3e50; text-decoration:none; margin:0 8px;">Twitter</a>
+      </p>
+      <p style="font-size:20px; color:#333; margin:12px 0;">
+        🧭 Customer Support: Available in English, Hindi, and Telugu
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 Shopora. All rights reserved.
+</footer>
+
+
+	
+  <script src="user.js"></script>
+</body>
+</html>
